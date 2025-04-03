@@ -58,4 +58,3 @@
 .animate-in {
   animation-delay: calc(var(--index, 0) * 100ms);
 }
-
