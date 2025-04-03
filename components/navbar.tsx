@@ -3,9 +3,10 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { ThemeToggle } from "../components/theme-toggle"
-import { Menu } from "lucide-react"
+import { Menu, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useMobile } from "@/hooks/use-mobile"
+import { CustomLink } from "@/components/ui/custom-link"
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -39,7 +40,11 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold tracking-tighter transition-colors hover:text-primary">
+            <Link
+              href="/"
+              className="text-xl font-bold tracking-tighter transition-colors hover:text-primary"
+              aria-label="Home"
+            >
               DevOps<span className="text-primary">.</span>
             </Link>
           </div>
@@ -63,6 +68,13 @@ export default function Navbar() {
                 </Link>
               ))}
               <ThemeToggle />
+              <CustomLink
+                href="https://github.com"
+                aria-label="GitHub"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Github className="h-5 w-5" />
+              </CustomLink>
             </nav>
           )}
         </div>

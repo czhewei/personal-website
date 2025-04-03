@@ -1,3 +1,6 @@
 module.exports = {
-  output: 'export',
-};
+  output: "export",
+  experimental: {
+    turbo: false,
+  },
+}

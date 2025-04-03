@@ -16,7 +16,7 @@ export default function Contact() {
         <div className="flex items-center justify-center gap-10 py-2">
           <motion.div whileHover="hover" initial="initial">
             <Link
-              href="https://linkedin.com/in/yourprofile"
+              href="https://linkedin.com/in/czhew"
               target="_blank"
               rel="noopener noreferrer"
               className="text-neutral-400 hover:text-neutral-700 transition-colors"
@@ -30,7 +30,7 @@ export default function Contact() {
 
           <motion.div whileHover="hover" initial="initial">
             <Link
-              href="mailto:zhewei@example.com"
+              href="mailto:czhewei.work@gmail.com"
               className="text-neutral-400 hover:text-neutral-700 transition-colors"
               aria-label="Email"
             >
@@ -42,7 +42,7 @@ export default function Contact() {
 
           <motion.div whileHover="hover" initial="initial">
             <Link
-              href="tel:+15551234567"
+              href="tel:+6596747271"
               className="text-neutral-400 hover:text-neutral-700 transition-colors"
               aria-label="Phone"
             >
@@ -56,4 +56,3 @@ export default function Contact() {
     </div>
   )
 }
-

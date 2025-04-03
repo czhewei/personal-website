@@ -56,7 +56,7 @@ export default function Home() {
             <div className="h-6 border-r border-neutral-200 mx-1"></div>
 
             <Link
-              href="https://linkedin.com/in/yourprofile"
+              href="https://linkedin.com/in/czhew"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 text-neutral-400 hover:text-neutral-600 transition-colors"
@@ -67,7 +67,7 @@ export default function Home() {
             </Link>
 
             <Link
-              href="mailto:zhewei@example.com"
+              href="mailto:czhewei.work@gmail.com"
               className="p-2 text-neutral-400 hover:text-neutral-600 transition-colors"
               aria-label="Email"
               title="Email"
@@ -76,7 +76,7 @@ export default function Home() {
             </Link>
 
             <Link
-              href="tel:+15551234567"
+              href="tel:+6596747271"
               className="p-2 text-neutral-400 hover:text-neutral-600 transition-colors"
               aria-label="Phone"
               title="Phone"
