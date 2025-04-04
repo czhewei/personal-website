@@ -4,4 +4,5 @@ module.exports = {
   output: "export",
   basePath: isProd ? "/personal-website" : "",
   assetPrefix: isProd ? "/personal-website" : "",
+  trailingSlash: true,
 };
