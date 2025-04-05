@@ -35,7 +35,14 @@ jobs:
           publish_branch: gh-pages
           destination_dir: .
 
-      - name: Verify gh-pages branch
+      - name: Move files to root (if needed)
+        run: |
+          cd ./out
+          mv * ../
+          cd ..
+          rm -rf ./out
+
+      - name: Verify gh-pages branch after deployment
         run: |
           git fetch origin gh-pages
           git checkout gh-pages
