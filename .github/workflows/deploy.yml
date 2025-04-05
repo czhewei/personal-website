@@ -24,8 +24,8 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Verify build output
-        run: ls -la ./out
+      - name: Move index.html to root
+        run: mv ./out/index.html ./index.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -35,15 +35,11 @@ jobs:
           publish_branch: gh-pages
           destination_dir: .
 
-      - name: Move files to root (if needed)
-        run: |
-          cd ./out
-          mv * ../
-          cd ..
-          rm -rf ./out
-
-      - name: Verify gh-pages branch after deployment
+      - name: Deploy index.html to root
         run: |
           git fetch origin gh-pages
           git checkout gh-pages
-          ls -la
+          mv ./index.html .
+          git add index.html
+          git commit -m "Move index.html to root" || echo "No changes to commit"
+          git push origin gh-pages
