@@ -26,9 +26,9 @@ export default function Navbar() {
   }
 
   const navLinks = [
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: "About", href: `${process.env.NEXT_PUBLIC_BASE_PATH}/#about` },
+    { name: "Projects", href: `${process.env.NEXT_PUBLIC_BASE_PATH}/#projects` },
+    { name: "Contact", href: `${process.env.NEXT_PUBLIC_BASE_PATH}/#contact` },
   ]
 
   return (

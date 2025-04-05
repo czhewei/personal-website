@@ -24,6 +24,9 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Verify build output
+        run: ls -la ./out
+
       - name: Move index.html to root
         run: mv ./out/index.html ./index.html
 
