@@ -8,31 +8,29 @@ function Header({ toggleAbout, showAbout }) {
       <h1 className="text-[28px] font-light">
         Hello, I'm <span className="font-bold text-foreground">Zhe Wei</span>.
       </h1>
-      <div className="flex items-center justify-center gap-6 mt-2">
+      <div className="icon-container">
         <button
           onClick={toggleAbout}
-          className={`relative p-2 rounded-full transition-colors ${
-            showAbout ? "bg-neutral-100" : "hover:bg-neutral-100"
-          } hover:text-accent`}
+          className={`icon-button ${showAbout ? "bg-neutral-100" : "hover:bg-neutral-100"}`}
           aria-label="About me"
           title="About me"
         >
-          <User className="h-[28px] w-[28px] stroke-[1px]" />
+          <User className="icon" />
         </button>
         <span className="w-px h-8 bg-foreground"></span>
         <a
           href="https://www.linkedin.com/in/czhew/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-accent"
+          className="icon-button"
         >
-          <Linkedin className="h-[28px] w-[28px] stroke-[1px]" title="LinkedIn" />
+          <Linkedin className="icon" title="LinkedIn" />
         </a>
-        <a href="mailto:czhewei.work@gmail.com" className="hover:text-accent">
-          <Mail className="h-[28px] w-[28px] stroke-[1px]" title="Mail" />
+        <a href="mailto:czhewei.work@gmail.com" className="icon-button">
+          <Mail className="icon" title="Mail" />
         </a>
-        <a href="tel:+6596747271" className="hover:text-accent">
-          <Phone className="h-[28px] w-[28px] stroke-[1px]" title="Phone" />
+        <a href="tel:+6596747271" className="icon-button">
+          <Phone className="icon" title="Phone" />
         </a>
       </div>
     </header>
@@ -47,14 +45,8 @@ function AboutSection() {
     "That perspective continues to shape how I approach building modern infrastructure and delivering software today."
   ];
 
-  const sectionStyle = {
-    maxWidth: '800px',
-    textAlign: 'justify',
-    marginTop: '20px', // Add margin to create spacing
-  };
-
   return (
-    <section style={sectionStyle}>
+    <section className="about-section-content">
       {aboutText.map((paragraph, index) => (
         <p key={index} className="mb-4">
           {paragraph}
