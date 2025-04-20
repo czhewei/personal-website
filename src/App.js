@@ -50,7 +50,7 @@ function AboutSection() {
   const sectionStyle = {
     maxWidth: '800px',
     textAlign: 'justify',
-    marginTop: '40px', // Add margin to create spacing
+    marginTop: '35px', // Add margin to create spacing
   };
 
   return (
