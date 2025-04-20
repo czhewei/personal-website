@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { User, Linkedin, Mail, Phone } from 'lucide-react';
-import './index.css'; // This should point to your CSS file (likely 'app.css')
+import './index.css';
 
 function Header({ toggleAbout, showAbout }) {
   return (
