@@ -50,7 +50,7 @@ function AboutSection() {
   const sectionStyle = {
     maxWidth: '800px',
     textAlign: 'justify',
-    'margin-top': '20px',
+    'margin-top': '15px',
   };
   
   return (
