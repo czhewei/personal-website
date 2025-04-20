@@ -37,6 +37,7 @@ h1 {
 
 h1 .highlight {
   font-weight: 400;
+  color: var(--neutral-gray);
 }
 
 .icon-container {
@@ -53,33 +54,9 @@ h1 .highlight {
   font-weight: 300;
   line-height: 1.6;
   color: var(--neutral-gray);
-  text-align: justify;
-  margin-top: var(--section-padding);
-  max-width: 800px;
-}
-
-.icon {
-  font-size: var(--icon-size);
-  color: var(--neutral-gray);
-  stroke-width: 1;
-  transition: transform 0.3s ease, stroke-width 0.3s ease, color 0.3s ease;
-}
-
-.icon:hover {
-  transform: scale(1.2);
-  stroke-width: 2;
-  color: #444;
-}
-
-.icon-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  color: inherit;
-  transition: color 0.3s ease;
-}
-
-.icon-button:hover .icon {
-  color: var(--hover-gray);
+  text-align-last: center; 
+  -moz-text-align-last: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
