@@ -107,7 +107,7 @@ footer {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0;
+  padding: 12px; /* Increase padding for touch-friendly buttons */
   color: inherit;
 }
 
@@ -135,6 +135,8 @@ footer {
 
 .icon {
   font-size: var(--icon-size);
+  width: var(--icon-size);
+  height: var(--icon-size);
   color: var(--neutral-gray);
   stroke-width: 1;
   transition: transform 0.3s ease, stroke-width 0.3s ease, color 0.3s ease;
@@ -157,4 +159,59 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.about-section-style {
+  margin-top: 15px;
+  text-align: justify;
+  max-width: 800px;
+}
+
+@media (max-width: 768px) {
+  .icon-container {
+    gap: 20px; /* Reduce gap for smaller screens */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .about-section-content {
+    font-size: var(--font-size-small); /* Use smaller font size */
+    margin: 30px auto; /* Adjust margin */
+  }
+}
+
+@media (max-width: 480px) {
+  .icon-container {
+    gap: 10px; /* Further reduce gap for very small screens */
+  }
+
+  h1 {
+    font-size: 1.2rem; /* Smaller font size for very small screens */
+  }
+
+  .about-section-content {
+    font-size: 0.9rem; /* Smaller font size */
+    margin: 20px auto; /* Adjust margin */
+  }
+}
+
+@media (max-width: 320px) {
+  .icon-container {
+    gap: 5px; /* Further reduce gap for very small screens */
+  }
+
+  h1 {
+    font-size: 1rem; /* Smaller font size for very small screens */
+  }
+
+  .about-section-content {
+    font-size: 0.8rem; /* Smaller font size */
+    margin: 15px auto; /* Adjust margin */
+  }
+
+  .icon {
+    font-size: 0.8rem; /* Adjust icon size for very small screens */
+  }
 }
