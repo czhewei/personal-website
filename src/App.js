@@ -47,8 +47,14 @@ function AboutSection() {
     "That perspective continues to shape how I approach building modern infrastructure and delivering software today."
   ];
 
+  const sectionStyle = {
+    maxWidth: '800px',
+    textAlign: 'justify',
+    'margin-top': '15px',
+  };
+  
   return (
-    <section className="about-section-style">
+    <section style={sectionStyle}>
       {aboutText.map((paragraph, index) => (
         <p key={index} className="mb-4">
           {paragraph}
